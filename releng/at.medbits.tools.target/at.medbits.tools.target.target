@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="at.medbits.tools.target" sequenceNumber="1626081119">
+<target name="at.medbits.tools.target" sequenceNumber="1669296953">
   <locations>
     <location includeMode="slicer" includeAllPlatforms="true" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.pde.feature.group" version="3.14.700.v20210303-1800"/>
-      <unit id="org.eclipse.jdt.feature.group" version="3.18.700.v20210303-1800"/>
-      <unit id="org.eclipse.sdk.feature.group" version="4.19.0.v20210303-1800"/>
-      <unit id="org.eclipse.e4.rcp.feature.group" version="4.19.0.v20210302-1107"/>
-      <unit id="org.eclipse.m2e.maven.runtime" version="1.16.0.20210129-0849"/>
-      <unit id="org.eclipse.m2e.maven.runtime.slf4j.simple" version="1.16.0.20200610-1735"/>
-      <unit id="org.eclipse.emf.feature.group" version="2.25.0.v20210114-1734"/>
-      <repository location="http://download.eclipse.org/releases/2021-03/"/>
+      <unit id="org.eclipse.pde.feature.group" version="3.14.1300.v20220831-1800"/>
+      <unit id="org.eclipse.jdt.feature.group" version="3.18.1300.v20220831-1800"/>
+      <unit id="org.eclipse.sdk.feature.group" version="4.25.0.v20220831-1800"/>
+      <unit id="org.eclipse.e4.rcp.feature.group" version="4.25.0.v20220829-1402"/>
+      <unit id="org.eclipse.m2e.feature.feature.group" version="2.0.4.20220904-1703"/>
+      <unit id="org.eclipse.emf.feature.group" version="2.31.0.v20220817-1401"/>
+      <unit id="com.google.guava" version="31.1.0.jre"/>
+      <unit id="com.google.guava.failureaccess" version="1.0.1"/>
+      <unit id="org.sat4j.core" version="2.3.6.v20201214"/>
+      <unit id="org.sat4j.pb" version="2.3.6.v20201214"/>
+      <unit id="org.eclipse.e4.ui.progress" version="0.3.500.v20220717-1456"/>
+      <unit id="org.apache.commons.commons-io" version="2.11.0"/>
+      <repository location="http://download.eclipse.org/releases/2022-09/"/>
     </location>
   </locations>
 </target>

@@ -119,14 +119,14 @@ public class LaunchToSurefirePomHandler extends AbstractHandler implements IHand
 					parentArtifactId = parentContent.getArtifactId();
 					version = parentContent.getVersion();
 					groupId = parentContent.getGroupId();
-					
-					if(version == null) {
+
+					if (version == null) {
 						version = parentContent.getParent().getVersion();
 					}
-					if(groupId == null) {
+					if (groupId == null) {
 						groupId = parentContent.getParent().getGroupId();
 					}
-					
+
 					Parent parent = new Parent();
 					parent.setArtifactId(parentArtifactId);
 					parent.setVersion(version);
@@ -178,10 +178,10 @@ public class LaunchToSurefirePomHandler extends AbstractHandler implements IHand
 	@SuppressWarnings("restriction")
 	private String determineArtifactId(IFile file) {
 		IProject project = file.getProject();
-		
+
 		IFile pluginXml = PDEProject.getPluginXml(project);
 		IFile manifest = PDEProject.getManifest(project);
-		
+
 		if (pluginXml != null && manifest != null) {
 			WorkspaceBundlePluginModel model = new WorkspaceBundlePluginModel(manifest, pluginXml);
 			if (model != null && (model instanceof IBundlePluginModelBase)) {
@@ -212,7 +212,7 @@ public class LaunchToSurefirePomHandler extends AbstractHandler implements IHand
 		Plugin plugin = new Plugin();
 		plugin.setGroupId("org.eclipse.tycho");
 		plugin.setArtifactId("tycho-surefire-plugin");
-		plugin.setVersion("${tycho-version}");
+		plugin.setVersion("${tycho.version}");
 		try {
 			TychoSurefireXml xml = TychoSurefireXml.of(attributes, workspaceBundles, targetBundles);
 			Xpp3Dom dom = Xpp3DomBuilder.build(xml.getInputStream(), "UTF-8");
@@ -228,7 +228,7 @@ public class LaunchToSurefirePomHandler extends AbstractHandler implements IHand
 		Plugin plugin = new Plugin();
 		plugin.setGroupId("org.eclipse.tycho");
 		plugin.setArtifactId("target-platform-configuration");
-		plugin.setVersion("${tycho-version}");
+		plugin.setVersion("${tycho.version}");
 		workspaceBundles = LaunchBundles.fragments(workspaceBundles);
 		targetBundles = LaunchBundles.fragments(targetBundles);
 		try {
